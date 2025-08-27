@@ -1,0 +1,32 @@
+# 0) Konfigurace
+NVAR = 10000  # Počet proměnných
+M_CLAUSES = 42600  # α = m/n = 42600/10000 = 4.26
+T = 10.0  # Optimalizováno pro kratší dobu
+DT = 0.01
+BURN = 20.0  # Optimalizováno pro kratší dobu
+STRIDE = 10
+SEED_BASE = [31, 32, 33]
+GRID = [48.0]
+LAMBDA_MAX_CLAUSE_THRESHOLD = 10.0
+R_TIME_CLAUSE_THRESHOLD = 0.2
+ALPHA_DEFAULT = 18.0
+K_TF = 9.0
+W_CLAUSE_DEFAULT = 0.6
+OPP_FRAC_DEFAULT = 0.1
+R_DEFAULT = 3
+CLAUSE_COUPLING_DEFAULT = 0.3
+PROFILES = {
+    "tuner_base_sealed": {
+        "alpha": 19.124,
+        "w_clause": 1.742,
+        "opp_frac": 0.789,
+        "R": R_DEFAULT,
+        "R_sat": R_DEFAULT,
+        "R_uns": R_DEFAULT,
+        "noise": 0.0025,
+        "replica_anticorr": 0.115,
+        "kc_jitter": 0.192,
+        "clause_coupling": 0.287,
+    },
+}
+ACTIVE_PROFILE = "tuner_base_sealed"
